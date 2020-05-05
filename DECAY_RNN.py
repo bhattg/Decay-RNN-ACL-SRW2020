@@ -63,7 +63,7 @@ class DecayModule(nn.Module):
 			w_x = torch.matmul(self.weight_ih,input_).t()
 			w_h = torch.matmul(dale_hh,hx.t()).t()
 			# w_h = torch.matmul(self.weight_hh,hx.t()).t()  
-		w_w = ((self.rgate) * hx) + ((1-(self.rgate)) * (w_x + w_h))
+		(nn.Sigmoid(self.rgate) * hx) + ((1-nn.Sigmoid(self.rgate)) * (w_x + w_h))
 		h =  self.non_linearity(w_w)
 		return h  # shape is (M, H) where M is the batch size and H is the embedded dimension. 
 
