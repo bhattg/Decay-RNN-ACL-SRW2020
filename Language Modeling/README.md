@@ -2,13 +2,44 @@
 
 This readme is just the integration of decay rnn with the repo of [authors](https://github.com/BeckyMarvin/LM_syneval) of  "Targeted Syntactic Evaluation of LMs". We sincerely thank the authors and have cited them in our work. Please follow the following to generate the Table 4 of our paper. After completion of this, you will get the output file similar to what we have inside the results folder. Models folder will contain the save model during the training. 
 
-## HOW TO USE THIS CODE
-
-### Language model training data
+## Language model training data
 
 We used the same training data as Gulordava et al. (2018). Each corpus consists of around 100M tokens from English Wikipedia. We used training (80M) and validation (10M) subsets in our experiments. All corpora were shuffled at sentence level. Links to download the data are below:
 
 [train](https://dl.fbaipublicfiles.com/colorless-green-rnns/training-data/English/train.txt) / [valid](https://dl.fbaipublicfiles.com/colorless-green-rnns/training-data/English/valid.txt) / [test](https://dl.fbaipublicfiles.com/colorless-green-rnns/training-data/English/test.txt) / [vocab](https://dl.fbaipublicfiles.com/colorless-green-rnns/training-data/English/vocab.txt)
+
+## Too long to read all this stuff? Follow the steps in this section to quickly get the runs! 
+1. If you want to train Language Model:
+	* Change the configurations in the hyperparameters.txt 
+	* If just want to train a single objective LM
+	```
+	cd example_scripts
+	./train_lm.sh
+	```
+	* If want to train a CCG Super tagged multitask LM
+	```
+	cd example_scripts
+	./train_multitask.sh
+	```
+2. Once trained the LM(s), to test them:
+	* To get the testing loss, perplexity and other soft information(s), please do this
+	```
+	cd example_scripts
+	./test.sh
+	```
+
+3. Once tested, please do :
+
+	```
+	python analyze_results.py --results_file $RESULTS_FILE --model_type $TYPE --mode $MODE
+	```
+
+	where $RESULTS is the path to the file where the RNN LM/multitask or ngram results were dumped, $MODEL_TYPE is the type of model (rnn/multitask/ngram) and $MODE is an optional argument that can be 'full' or 'condensed' or 'overall' (default is 'overall').
+
+
+Still in doubt?? May the following content help you out. 
+
+## HOW TO USE THIS CODE
 
 
 ### Training the language models
