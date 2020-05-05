@@ -22,7 +22,7 @@ prop_train is proportion of dataset used for training:
 
 ```
 
-from agreement_acceptor_decay_rnn import FullGramSentence
+from agreement_acceptor import FullGramSentence
 import filenames
 
 pvn = FullGramSentence(filenames.deps, prop_train=0.1, output_filename='output_log.txt')
@@ -40,7 +40,7 @@ To test the model, set the testing size to 0. This will take the remaining datas
 
 ```
 
-from agreement_acceptor_decay_rnn import FullGramSentence
+from agreement_acceptor import FullGramSentence
 import filenames
 
 pvn = FullGramSentence(filenames.deps, prop_train=0.1, output_filename='output_log.txt')
@@ -63,8 +63,7 @@ save_data=True, load_data=False
 prop_train is proportion of dataset used for training:
 
 ```
-
-from agreement_acceptor_decay_rnn import PredictVerbNumber
+from agreement_acceptor import FullGramSentence
 import filenames
 
 pvn = PredictVerbNumber(filenames.deps, prop_train=0.1, output_filename='output_log.txt')
@@ -82,8 +81,7 @@ All verbose will be stored in logs folder. There will be output.txt which will h
 To test the model, set the testing size to 0. This will take the remaining dataset!
 
 ```
-
-from agreement_acceptor_decay_rnn import PredictVerbNumber
+from agreement_acceptor import FullGramSentence
 import filenames
 
 pvn = PredictVerbNumber(filenames.deps, prop_train=0.1, output_filename='output_log.txt')
