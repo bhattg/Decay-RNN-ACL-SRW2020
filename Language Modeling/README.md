@@ -8,7 +8,7 @@ We used the same training data as Gulordava et al. (2018). Each corpus consists 
 
 [train](https://dl.fbaipublicfiles.com/colorless-green-rnns/training-data/English/train.txt) / [valid](https://dl.fbaipublicfiles.com/colorless-green-rnns/training-data/English/valid.txt) / [test](https://dl.fbaipublicfiles.com/colorless-green-rnns/training-data/English/test.txt) / [vocab](https://dl.fbaipublicfiles.com/colorless-green-rnns/training-data/English/vocab.txt)
 
-## Too long to read all this stuff? Follow the steps in this section to quickly get the runs! 
+## In Hurry? Follow the steps in this section to quickly get the runs! 
 1. If you want to train Language Model:
 	* Change the configurations in the hyperparameters.txt 
 	* If just want to train a single objective LM
