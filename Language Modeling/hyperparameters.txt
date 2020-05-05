@@ -1,0 +1,42 @@
+#######################################################
+# Specify all the model hyperparameters here,
+# then run the training/testing scripts.
+#######################################################
+
+# Main working directory, change according to your need! 
+workdir=~/scratch/rnn_cognitive_models/decay_1902_d1
+
+# Directory where the Pytorch word language model code lives (with modifications for the multitask LMs)
+lm_dir=$workdir/
+
+# Paths to LM & CCG data, load data to be used when the dataset is already generated and saved, otherwise do not use load_data! 
+# To just create the data, use only save
+
+lm_data_dir=$workdir/data/lm_data
+ccg_data_dir=$workdir/data/ccg_data
+train=train.txt
+valid=valid.txt
+test=test.txt
+load_data=True
+save_data=True
+only_save=False
+load_model=False
+
+
+# Path to save the model
+model_dir=$workdir/models
+
+# TRAINING: Default LM hyperparameters, for the debug mode, make debug=1. Not recommended without reading the code flow! 
+# NOTE: By default, DECAY is ReLU model. For tanh model, do DECAY_TANH
+
+epochs=40
+model=DECAY
+log_freq=1000 # how often to display training progress
+batch_size=128 # batch size
+num_hid=650 # number of hidden units
+lr=0.001 # learning rate
+seed=2223 # random seed
+nlayers=2 # number of layers in network
+order=5 # default order for an ngram model
+dropout=0.2
+debug=0
