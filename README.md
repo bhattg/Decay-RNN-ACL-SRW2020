@@ -3,6 +3,10 @@ This is an official pytorch implementation for the experiments described in the 
 
 For tests mentioned in Section 6.1, 6.2 and 6.3, please look at the individual model folder. For LM, please choose the Language Modeling folder. 
 
+Requirements:
+Pytorch : 1.1
+
+
 If you find our work useful, then please consider citing us using:
 ```
 @article{bhatt2020much,
