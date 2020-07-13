@@ -112,7 +112,7 @@ class DECAY_RNN_Model(object):
 
 
 ##########################################################
-#### EXTERNAL ADDITION DONE TO GET LINZEN TESTED #########
+#### EXTERNAL ADDITION DONE TO GET Targeted Syneval TESTED #########
 ##########################################################
 
     def external_result_logger(self, result_dict):
@@ -243,7 +243,7 @@ class DECAY_RNN_Model(object):
                  load = False, model = '', test_size=7000, 
                  train_size=None, model_prefix='__', epochs=20, data_name='Not', 
                  activation=False, df_name='_verbose_.pkl', load_data=False, 
-                 save_data=False, test_linzen_template_pvn=False, linzen_template_filename= None):
+                 save_data=False, test_Targeted Syneval_template_pvn=False, Targeted Syneval_template_filename= None):
         self.batched= batched
         if (load_data):
             self.load_train_and_test(test_size, data_name)
@@ -263,9 +263,9 @@ class DECAY_RNN_Model(object):
             else:   
                 self.train(epochs, model_prefix)
         else:
-            if test_linzen_template_pvn:
-                self.external_template_waveform_pvn(linzen_template_filename)
-                print("Testing Linzen template for pvn completed!!! Exiting program!")
+            if test_Targeted Syneval_template_pvn:
+                self.external_template_waveform_pvn(Targeted Syneval_template_filename)
+                print("Testing Targeted Syneval template for pvn completed!!! Exiting program!")
                 sys.exit()
 
             result_dict= self.test_model()

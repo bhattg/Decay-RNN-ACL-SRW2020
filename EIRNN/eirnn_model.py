@@ -115,7 +115,7 @@ class EIRNN_Model(object):
             file.write(message + '\n')        
     
 ##########################################################
-#### EXTERNAL ADDITION DONE TO GET LINZEN TESTED #########
+#### EXTERNAL ADDITION DONE TO GET Targeted Syneval TESTED #########
 ##########################################################
 
     def external_result_logger(self, result_dict):
@@ -226,7 +226,7 @@ class EIRNN_Model(object):
 
 # IF YOU HAVE AN EXTERNAL LNIZEN .PKL, THEN USE load_data=False, test_external=True, load_external=False
 # external_file = address of saved modified pkl inputs 
-#pickel folder: address of linzen pikel 
+#pickel folder: address of Targeted Syneval pikel 
 
     def pipeline(self, train = True, batched=False, batch_size = 32, shuffle = True, num_workers= 0,
                  load = False, model = '', test_size=7000, 
